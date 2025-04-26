@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    .registration-card {
+      background: #ffffff;
+      margin-top: 20px;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+     h2 {
+      text-align: center;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    .registration-card label {
+      display: block;
+      margin-bottom: 6px;
+    }
+    .registration-card input[type="text"],
+    .registration-card input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .registration-card button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .registration-card button:hover {
+      background-color: #0056b3;
+    }
+    .login-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .login-link a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="registration-card">
+  <h2>Create Account</h2>
+  <form action="/register" method="post">
+    <label for="userName">Name</label>
+    <input type="text" id="userName" name="userName" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age" required>
+
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="bloodGroup">Blood Group</label>
+    <input type="text" id="bloodGroup" name="bloodGroup" required>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div class="login-link">
+    Already have an account? <a href="login.html">Log In</a>
+  </div>
+</div>
+
+</body>
+</html>
