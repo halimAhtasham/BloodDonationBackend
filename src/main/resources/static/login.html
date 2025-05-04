@@ -6,85 +6,71 @@
   <title>Login</title>
   <style>
     body {
-      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: Arial, sans-serif;
+      margin: 0;
     }
-    .login-card {
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 400px;
+    .login-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
     }
-    h2 {
+    .login-container h2 {
+      margin-bottom: 20px;
       text-align: center;
-      margin-bottom: 30px;
-      font-weight: bold;
-      font-size: 24px;
       color: #333;
     }
-    .login-card label {
-      display: block;
-      margin-bottom: 6px;
-      
+    .form-group {
+      margin-bottom: 15px;
     }
-    .login-card input[type="text"],
-    .login-card input[type="password"] {
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
       width: 100%;
       padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-    .login-card button {
-      width: 100%;
-      padding: 12px;
+      border: none;
+      border-radius: 4px;
       background-color: #007BFF;
       color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
       font-size: 16px;
-      font-weight: bold;
+      cursor: pointer;
     }
-    .login-card button:hover {
+    button:hover {
       background-color: #0056b3;
-    }
-    .register-link {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-    .register-link a {
-      color: #007BFF;
-      text-decoration: none;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
-
-<div class="login-card">
+<div class="login-container">
   <h2>Login</h2>
-  <form>
-    <label for="username">User Name</label>
-    <input type="text" id="username" required>
-
-    <label for="password">Password</label>
-    <input type="password" id="password" required>
-
-    <button type="submit">Log In</button>
+  <form action="/login" method="post">
+    <div class="form-group">
+      <label for="userName">Username:</label>
+      <input type="text" id="userName" name="userName" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
   </form>
-  <div class="register-link">
-    Don't have an account? <a href="register.html">Register</a>
-  </div>
 </div>
-
 </body>
 </html>
